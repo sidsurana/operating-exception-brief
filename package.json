@@ -1,0 +1,10 @@
+{
+  "name": "operating-exception-brief",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests.mjs"
+  },
+  "description": "Review synthetic KPI exceptions and prepare an evidence-linked operating brief.",
+  "license": "MIT"
+}

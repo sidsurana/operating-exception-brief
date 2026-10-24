@@ -1,0 +1,2 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import {analyze,sample} from './engine.mjs';
+test('flags declining revenue and rising churn with sources',()=>{let r=analyze(sample);assert.equal(r.rows[0].status,'REVIEW');assert.match(r.rows[0].evidence,/Rows 3–4/);assert.equal(r.rows[2].status,'REVIEW')});test('requires comparison period',()=>assert.throws(()=>analyze('month,revenue,cost,churn_pct\nJan,100,50,1')));
